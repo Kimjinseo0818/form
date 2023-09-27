@@ -4,8 +4,92 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Form</title>
+    <style>
+        #start {
+            text-align: center;
+        }
+
+        #mint {
+            
+            display: inline-block;
+            
+            background-color: antiquewhite;
+            width: 270px;
+        }
+
+        form {
+            border: solid 1px black;
+            padding: 10px;
+        }
+    </style>
 </head>
 <body>
-    <h1>Hello World!</h1>
+    <div style="background-color:aliceblue">
+        <hr color="black" size="0.5">
+        <h1 id="start">한동대학교 민트초코 호불호 설문지</h1>
+        <hr color="black" size="0.5">
+    </div>
+    <div id="mint">
+        <form action="action.html">        
+            <p>
+                이름:
+                <input type="text" name="name" value="" required><br>
+            </p>
+            <p>생년월일:
+                <input type="date" min="1980-01-01" max="2005-12-31" name="fromdate">
+            </p>
+            <p>
+                학번: <input type="text" name="school_number" value="" placeholder="2XXXXXXX" pattern="[2]{1}[0-9]{7}" required><br>
+            </p>
+            <p>
+                학부: <select name="study">
+                <option value="">글로벌리더십학부</option><br>
+                <option value="">국제어문학부</option><br>
+                <option value="">경영경제학부</option><br>
+                <option value="">법학부</option><br>
+                <option value="">커뮤니케이션학부</option><br>
+                <option value="">공간시스템공학부</option><br>
+                <option value="">기계제어학부</option><br>
+                <option value="">콘텐츠융합디자인학부</option><br>
+                <option value="">생명과학학부</option><br>
+                <option value="">전산전자공학부</option><br>
+                <option value="">상담심리사화복지학부</option><br>
+                <option value="">ICT창업학부</option><br>
+                <option value="">창의교육원</option><br>
+                <option value="">AI교육원</option><br>
+                </select>
+            </p>
+            <p>
+                MBTI: <input type="text" name="mbti" value="" pattern="[I,E]{1}[S,N]{1}[F,T]{1}[P,J]{1}" required><br>
+            </p>
+            <p>
+                이메일: <input type="email" name="email" value="" required><br>
+            </p>
+            <p>
+                전화번호: <input type="tel" name="telephone_number" value="" placeholder="010-XXXX-XXXX" pattern="[0-9]{3}-[0-9]{4}-[0-9]{4}" required><br>
+            </p>
+            <p id="gen">성별 <br>
+                <input type="checkbox" name="gender" value="whole" checked> 남자 <br>
+                <input type="checkbox" name="gender" value="ground"> 여자
+            </p>
+            <p id="min">민트초코 호불호 여부 <br>
+                <input type="radio" name="mint" value="whole"> 호 <br>
+                <input type="radio" name="mint" value="ground"> 불호 <br>
+                <input type="radio" name="mint" value=""> 중립 
+            </p>
+            <p>
+                좋아하는 이유<br>
+                <textarea name="like"></textarea>
+            </p>
+            <p>
+                싫어하는 이유<br>
+                <textarea name="like"></textarea>
+            </p>
+        <p>
+            <input type="submit" value="제출">
+            <input type="reset" value="취소">
+        </p>
+        </form>
+    </div>
 </body>
 </html>
